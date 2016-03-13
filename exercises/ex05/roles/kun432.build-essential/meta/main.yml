@@ -1,0 +1,36 @@
+# file: build-essential/meta/main.yml
+
+galaxy_info:
+  author: "Kuniaki Shimizu"
+  description: Install packages required for compiling C software from source.
+  min_ansible_version: 1.4
+  license: MIT
+  platforms:
+  - name: Ubuntu
+    versions:
+    - lucid
+    - precise
+    - trusty
+  - name: Debian
+    version:
+    - wheezy
+  - name: Fedora
+    versions:
+    - 19
+    - 20
+  - name: EL
+    versions:
+    - 5
+    - 6
+    - 7
+  - name: Suse
+    versions:
+    - 13.1
+  - name: FreeBSD
+    versions:
+    - 10.0
+  categories:
+  - system
+  - development
+
+dependencies: []

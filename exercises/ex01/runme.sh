@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source "../common.ish"
 
 echo "Ping all hosts"
 echo "ansible"
@@ -10,6 +11,8 @@ echo "  -u vagrant            : Specify the user we will login as"
 echo ""
 
 cmd="ansible -i hosts all -m ping -u vagrant"
-echo "running: $cmd"
+echo "running: $(set_color green "$cmd")"
 echo ""
+echo "-----------------------------"
+read -n1 -r -p "Press space to continue..." key
 eval $cmd

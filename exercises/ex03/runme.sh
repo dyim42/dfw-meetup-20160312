@@ -1,5 +1,6 @@
 #!/bin/bash
  
+source '../common.ish'
 
 echo "executing first ansible run"
 echo "ansible-playbook"
@@ -15,33 +16,42 @@ read -n1 -r -p "Press space to continue..." key
 echo ""
 
 cmd="ansible-playbook -i hosts -s simple.yml"
-echo "running: $cmd"
+echo "running: $(set_color green "$cmd")"
 echo ""
+echo "-----------------------------------------"
+read -n1 -r -p "Press space to continue..." key
 eval $cmd
 
+echo ""
 echo ""
 
 
 echo "The contents of the with_handlers.yml file"
 cat with_handlers.yml
-echo ""
+echo "-----------------------------------------"
 read -n1 -r -p "Press space to continue..." key
+echo ""
 echo ""
 
 cmd="ansible-playbook -i hosts -s with_handlers.yml"
-echo "running: $cmd"
+echo "running: $(set_color green "$cmd")"
 echo ""
+echo "-----------------------------------------"
+read -n1 -r -p "Press space to continue..." key
 eval $cmd
 
 
 echo "The contents of the nginx.yml file"
 cat nginx.yml
-echo ""
+echo "-----------------------------------------"
 read -n1 -r -p "Press space to continue..." key
-
+echo ""
 echo ""
 
 cmd="ansible-playbook -i hosts -s nginx.yml"
-echo "running: $cmd"
+echo "running: $(set_color green "$cmd")"
 echo ""
+echo "-----------------------------------------"
+read -n1 -r -p "Press space to continue..." key
 eval $cmd
+
