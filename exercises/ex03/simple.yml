@@ -1,0 +1,7 @@
+---
+
+- hosts: dev
+  tasks:
+  - name: install htop for Debian systems
+    apt: pkg="htop" state=installed
+

@@ -1,0 +1,13 @@
+---
+
+- hosts: dev
+  tasks:
+  - name: install nginx for Debian systems
+    apt: pkg="nginx" state=installed
+    when: ansible_os_family == 'Debian'
+    notify:
+      - Start Nginx
+
+  handlers:
+  - name: Start Nginx
+    service: name=nginx state=started
