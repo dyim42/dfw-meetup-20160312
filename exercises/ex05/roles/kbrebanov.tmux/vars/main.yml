@@ -1,5 +1,0 @@
----
-# vars file for tmux
-
-tmux_packages:
-  - tmux

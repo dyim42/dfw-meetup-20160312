@@ -1,4 +1,0 @@
----
-domain: blah.com
-ssl_key: /etc/ssl/blah/blah.key
-ssl_crt: /etc/ssl/blah/blah.crt
